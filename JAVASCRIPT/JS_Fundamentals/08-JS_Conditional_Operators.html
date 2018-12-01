@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+<title> JS Conditional Operators </title>
+<body>
+<b> The “if” statement </b>
+<p> The if statement gets a condition, evaluates it and, if the result is true, executes the code. </p>
+<script> 
+let year = prompt('In which year was ECMAScript-2015 specification published?', '');
+if (year == 2015) alert( 'You are right!' );
+</script>
+<h2> <b> The “else” clause </b> </h2>
+<p> The if statement may contain an optional “else” block. It executes when the condition is wrong. </p>
+<script>
+	let love = prompt('Love is 1500?', '');
+	if (love == 1500) {
+  	alert( 'You are right now!' );
+	} 
+	else {
+  	alert( 'Wrong Answer' ); // any value except 2015
+	}
+</script>
+<h2> <b> Several conditions: “else if” </b> </h2>
+<p> Sometimes we’d like to test several variants of a condition. There is an else if clause for that. </p>
+<script> 
+ let years = prompt('In which year was ECMAScript-2015 specification published?', '');
+	if (years < 2015) 
+	{
+  		alert( 'Too early...' );
+	}
+	else if (years > 2015) 
+	{
+  		alert( 'Too late' );
+	} 
+	else 
+	{
+  		alert( 'Exactly!' );
+	}
+</script>
+<h2> <b> Ternary operator ‘?’ </b> </h2>
+<p> Sometimes we need to assign a variable depending on a condition. For instance: </p>
+<script> 
+	let accessAllowed;
+	let lol = prompt('How old are you?', '');
+		if (lol > 18) {
+  	accessAllowed = true;
+	} 
+		else {
+  accessAllowed = false;
+	}
+	alert(accessAllowed);
+</script>
+<h2> <b> Multiple ‘?’ </b> </h2>
+<p> A sequence of question mark ? operators allows returning a value that depends on more than one condition. For instance: </p>
+<script>
+	let baby = prompt('age?', 18);
+	let message = (baby < 3) ? 'Hi, baby!' :
+  		(baby < 18) ? 'Hello!' :
+  		(baby < 100) ? 'Greetings!' :
+  		'What an unusual age!';
+	alert( message );
+</script>
+<h2> <b> Non-traditional use of ‘?’ </b> </h2>
+<p> Sometimes the question mark ? is used as a replacement for if: </p>
+<script>
+	let company = prompt ('Which company created JavaScript?', '');
+	(company == 'Netscape') ?
+  	alert('Right!') : alert('Wrong.');
+</script>
+ <a href="http://javascript.info/"> Resource </a>
+</body>
+</html>
+
+
+

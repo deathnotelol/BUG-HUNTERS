@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+<title> JS Functions </title>
+<body>
+<p> Our new function can be called by its name: showMessage().</p>
+<script>
+function showMessage() {
+  alert( 'Hello everyone!' );
+}
+showMessage();
+showMessage();
+//A function can access an outer variable as well, for example:
+let userName = 'john';
+function showOff() {
+let message ='Hello, ' + userName;
+alert(message);
+}
+showOff();
+function Message(from, text) { // arguments: from, text
+  alert(from + ': ' + text);
+}
+Message('LoL', 'Hello!'); // LoL: Hello! (*)
+Message('LoL', "What's up?"); // LoL: What's up? (**)
+//There may be many occurrences of return in a single function. For instance:There may be many occurrences of return in a single function. For instance:
+function checkAge(age) {
+  if (age > 18) {
+    return true;
+  } else {
+    return confirm('Do you have permission from your parents?');
+  }
+}
+let age = prompt('How old are you?', 18);
+if ( checkAge(age) ) {
+  alert( 'Access granted' );
+} else {
+  alert( 'Access denied' );
+}
+</script> 
+<a href="http://javascript.info/"> Resource </a>
+</body>
+</html>
